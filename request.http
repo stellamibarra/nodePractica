@@ -11,3 +11,33 @@ Content-Type: application/json
     "online": "true"
 
 }
+
+###create a new product
+
+POST http://localhost:3000/api/products/
+Content-Type: application/json
+
+{
+    "name": "product",
+    "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+    "price": 100   
+}
+###create many products
+
+POST http://localhost:3000/api/products/many
+Content-Type: application/json
+
+{
+    "data": [
+        {
+            "name": "product",
+            "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+            "price": 100   
+        },
+        {
+            "name": "product",
+            "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+            "price": 100   
+        }
+    ]
+}
