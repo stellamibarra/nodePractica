@@ -1,43 +1,60 @@
-### create a new user
 
-POST http://localhost:3000/api/auth/
+@baseUrl=http://localhost:3000
+@resource=api
+@endpoint=cities
+@id=64f90a6c79db44ae99f3a621
+@limit=4
+@page=1
+@name=cities
+@sort=asc
+
+### Read All
+# Content-Type: application/json
+GET {{baseUrl}}/{{resource}}/{{endpoint}}
+Content-Type: application/json
+
+
+### Read Pagination
+GET {{baseUrl}}/{{resource}}/{{endpoint}}?limit={{limit}}&page={{page}}&name={{name}}
+
+### Create
+POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
 {
-    "email": "unmail.com",
-    "password": "123456",
-    "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
-    "role": 2,
-    "online": "true"
+    "name": "city2",
+    "country": "Argentina",
+    "image": "htt-url",
+    "_itineraries":"64f94de3c5578a5f362154b3"
 
 }
 
-###create a new product
+###
+POST {{baseUrl}}/{{resource}}/{{endpoint}}
+Content-Type: application/json
 
-POST http://localhost:3000/api/products/
+     {
+       "image": "imagenitinerario",
+        "price": 77,
+        "duration": 3,
+        "likes":44 ,
+        "_city":"64f94de3c5578a5f362154af"
+     }   
+
+### Delete
+DELETE {{baseUrl}}/{{resource}}/{{endpoint}}/{{id}}
+Content-Type: application/json
+
+
+### Create
+POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
 {
-    "name": "product",
-    "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
-    "price": 100   
-}
-###create many products
-
-POST http://localhost:3000/api/products/many
-Content-Type: application/json
-
-{
-    "data": [
-        {
-            "name": "product",
-            "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
-            "price": 100   
-        },
-        {
-            "name": "product",
-            "photo": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
-            "price": 100   
-        }
-    ]
+    "name": "title",
+    "image": "city2",
+    "price": "country",
+    "duration": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+    "likes": 3,
+    "hashtags": ["#hashtag1", "#hashtag2", "#hashtag3"]
 }
