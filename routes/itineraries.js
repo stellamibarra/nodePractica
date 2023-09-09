@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import create from '../controllers/itineraries/createOne.js';
+import create from '../controllers/itineraries/create.js';
 import createMany from '../controllers/itineraries/createMany.js';
 import read from '../controllers/itineraries/read.js';
 let itinerary_Router = Router();

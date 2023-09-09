@@ -22,10 +22,10 @@ POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
 {
-    "name": "La plata",
+    "name": "Rosario",
     "country": "Argentina",
-    "image": "htt-url"
-
+    "image": "htt-url",
+    "_itineraries" : "64fcc0bcadbe9ad61121613a"
 }
 
 ###
@@ -33,11 +33,10 @@ POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
      {
-       "image": "imagenitinerario",
+       "city": "https://unsplash.com/es/fotos/q7ZlbWbDnYo",
         "price": 77,
         "duration": 3,
-        "likes":44 ,
-        "_city":"64f94de3c5578a5f362154af"
+        "likes":44,
      }   
 
 ### Delete
@@ -50,10 +49,9 @@ POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
 {
-    "name": "title",
     "image": "city2",
-    "price": "country",
-    "duration": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ist",
+    "price": 6,
+    "duration": 6,
     "likes": 3,
-    "hashtags": ["#hashtag1", "#hashtag2", "#hashtag3"]
+    "_city": "64fcbf65adbe9ad611216135"
 }

@@ -1,14 +1,15 @@
 import City from "../../models/City.js";
 import paginationQuery from "../../utils/pagination-query.js";
 
+
 const read = async (req, res, next) => {
   try {
 
     const { queries, pagination } = paginationQuery(req);
 
-    let all = await City.find(queries, "name country image _itineraries -_id ")
+    let all = await City.find()
+      .populate('_itineraries')
       .sort({ name: 'asc' })
-      //    _itineraries.populate('_itineraries', 'name -_id')
       .skip(pagination.page > 0 ? (pagination.page - 1) * pagination.limit : 0)
       .limit(pagination.limit > 0 ? pagination.limit : 0);
 

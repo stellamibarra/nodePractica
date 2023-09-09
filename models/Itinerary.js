@@ -1,8 +1,6 @@
 
 import mongoose from 'mongoose';
 
-
-
 let schema =
     new mongoose.Schema({
 
@@ -22,10 +20,11 @@ let schema =
             type: Number,
             required: true
         },
-        _city: [{
+        _city:{
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'City'
-        }],
+            ref: "City"
+        }
+       
     });
 
 let Itinerary = mongoose.model("Itinerary", schema);
