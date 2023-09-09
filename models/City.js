@@ -15,10 +15,10 @@ let schema =
             type: String,
             required: true
         },
-        _itineraries: [{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'Itinerary'
-        }]
+        // _itineraries: [{
+        //     type: mongoose.Schema.Types.ObjectId,
+        //     ref: 'Itinerary'
+        // }]
     });
 
 let City = mongoose.model("City", schema);

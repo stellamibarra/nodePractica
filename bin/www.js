@@ -8,13 +8,18 @@ import app from '../app.js';
 import logger from 'debug'
 const debug = logger('mongo-node-express:server');
 import http from  'http';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * Get port from environment and store in Express.
  */
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT );
 app.set('port', port);
+
+const host = process.env.HOST 
 
 /**
  * Create HTTP server.
@@ -26,7 +31,7 @@ const server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
-server.listen(port , () => console.log(`Server running on port ${port}`));
+server.listen(port , host,() => console.log(`Server running on port ${port} in ${host} host`));
 
 server.on('error', onError);
 server.on('listening', onListening);

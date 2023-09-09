@@ -22,10 +22,9 @@ POST {{baseUrl}}/{{resource}}/{{endpoint}}
 Content-Type: application/json
 
 {
-    "name": "city2",
+    "name": "La plata",
     "country": "Argentina",
-    "image": "htt-url",
-    "_itineraries":"64f94de3c5578a5f362154b3"
+    "image": "htt-url"
 
 }
 

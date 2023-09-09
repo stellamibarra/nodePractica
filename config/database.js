@@ -5,4 +5,4 @@ let uri_link = process.env.DBCON;
 
 mongoose.connect(uri_link)
 .then(() => console.log("MongoDB connected..."))
-.catch((err) => console.log(err));
+.catch((err) => console.log(err));    

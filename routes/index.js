@@ -10,7 +10,7 @@ const indexRouter = Router();
 router.use(() => {})
 
 indexRouter.use('/auth', userRouter);
-// indexRouter.use('/products', productRouter);
+
 indexRouter.use('/cities', cityRouter)
 indexRouter.use('/itineraries', itineraryRouter);
 
